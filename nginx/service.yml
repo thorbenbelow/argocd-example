@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+
+metadata:
+  name: nginx-test
+spec:
+  type: ClusterIP
+  selector:
+    app: nginx-test
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
